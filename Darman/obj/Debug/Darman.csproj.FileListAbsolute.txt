@@ -9,3 +9,17 @@ D:\C# practice 🧠\Darman\Darman\obj\Debug\Darman.csproj.GenerateResource.cache
 D:\C# practice 🧠\Darman\Darman\obj\Debug\Darman.csproj.CoreCompileInputs.cache
 D:\C# practice 🧠\Darman\Darman\obj\Debug\Darman.exe
 D:\C# practice 🧠\Darman\Darman\obj\Debug\Darman.pdb
+C:\Users\Modern\Documents\GitHub\Darman\Darman\bin\Debug\Darman.exe.config
+C:\Users\Modern\Documents\GitHub\Darman\Darman\bin\Debug\Darman.exe
+C:\Users\Modern\Documents\GitHub\Darman\Darman\bin\Debug\Darman.pdb
+C:\Users\Modern\Documents\GitHub\Darman\Darman\obj\Debug\Darman.csproj.AssemblyReference.cache
+C:\Users\Modern\Documents\GitHub\Darman\Darman\obj\Debug\Darman.csproj.SuggestedBindingRedirects.cache
+C:\Users\Modern\Documents\GitHub\Darman\Darman\obj\Debug\Darman.Form1.resources
+C:\Users\Modern\Documents\GitHub\Darman\Darman\obj\Debug\Darman.Properties.Resources.resources
+C:\Users\Modern\Documents\GitHub\Darman\Darman\obj\Debug\Darman.csproj.GenerateResource.cache
+C:\Users\Modern\Documents\GitHub\Darman\Darman\obj\Debug\Darman.csproj.CoreCompileInputs.cache
+C:\Users\Modern\Documents\GitHub\Darman\Darman\obj\Debug\Darman.exe
+C:\Users\Modern\Documents\GitHub\Darman\Darman\obj\Debug\Darman.pdb
+C:\Users\Modern\Documents\GitHub\Darman\Darman\bin\Debug\Darman.Datalayer.dll
+C:\Users\Modern\Documents\GitHub\Darman\Darman\bin\Debug\Darman.Datalayer.pdb
+C:\Users\Modern\Documents\GitHub\Darman\Darman\obj\Debug\Darman.csproj.CopyComplete

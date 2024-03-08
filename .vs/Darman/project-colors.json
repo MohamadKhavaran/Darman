@@ -5,7 +5,12 @@
       "ProjectGuid": "5664713a-0ef0-4757-ac6a-2ddf44d53fd7",
       "DisplayName": "Darman",
       "ColorIndex": 0
+    },
+    "2f8907e4-9493-4266-8cbf-524730163232": {
+      "ProjectGuid": "2f8907e4-9493-4266-8cbf-524730163232",
+      "DisplayName": "Darman.Datalayer",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
