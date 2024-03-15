@@ -11,7 +11,7 @@ namespace Darman.Datalayer.Repository
         //CRUD  : Create Read Update Delete 
         bool insert(string Name, string SSID, string FatherName);
         bool update(int Id, string Name, string SSID, string FatherName);
-        bool delete(int Id);
+        bool Delete(int Id);
         DataTable SearchAll();
     }
 }

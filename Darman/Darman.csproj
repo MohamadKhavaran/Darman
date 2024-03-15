@@ -54,10 +54,30 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\DbConnection.cs" />
+    <Compile Include="Presentation\People\AddOrUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\People\AddOrUpdate.Designer.cs">
+      <DependentUpon>AddOrUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\People\People.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\People\People.Designer.cs">
+      <DependentUpon>People.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\MyMessage.cs" />
+    <Compile Include="Utility\Validator.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\People\AddOrUpdate.resx">
+      <DependentUpon>AddOrUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\People\People.resx">
+      <DependentUpon>People.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
