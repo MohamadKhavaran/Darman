@@ -61,10 +61,12 @@
             this.Information.Controls.Add(this.SelectPicture_Btn);
             this.Information.Controls.Add(this.pictureBox1);
             this.Information.Font = new System.Drawing.Font("Zar", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Information.Location = new System.Drawing.Point(12, 12);
+            this.Information.Location = new System.Drawing.Point(32, 16);
+            this.Information.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Information.Name = "Information";
+            this.Information.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Information.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Information.Size = new System.Drawing.Size(558, 197);
+            this.Information.Size = new System.Drawing.Size(558, 271);
             this.Information.TabIndex = 0;
             this.Information.TabStop = false;
             this.Information.Text = "اطلاعات شخصی";
@@ -73,26 +75,28 @@
             // 
             this.SSID_TxtBox.AccessibleDescription = "*";
             this.SSID_TxtBox.AccessibleName = "کد ملی";
-            this.SSID_TxtBox.Location = new System.Drawing.Point(187, 132);
+            this.SSID_TxtBox.Location = new System.Drawing.Point(187, 182);
+            this.SSID_TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SSID_TxtBox.Mask = "0000000000";
             this.SSID_TxtBox.Name = "SSID_TxtBox";
             this.SSID_TxtBox.Size = new System.Drawing.Size(220, 39);
-            this.SSID_TxtBox.TabIndex = 5;
+            this.SSID_TxtBox.TabIndex = 2;
             // 
             // FatherName_TextBox
             // 
             this.FatherName_TextBox.AccessibleDescription = "*";
             this.FatherName_TextBox.AccessibleName = "نام پدر";
-            this.FatherName_TextBox.Location = new System.Drawing.Point(187, 90);
+            this.FatherName_TextBox.Location = new System.Drawing.Point(187, 124);
+            this.FatherName_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FatherName_TextBox.Name = "FatherName_TextBox";
             this.FatherName_TextBox.Size = new System.Drawing.Size(220, 39);
-            this.FatherName_TextBox.TabIndex = 4;
+            this.FatherName_TextBox.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Zar", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(481, 132);
+            this.label3.Location = new System.Drawing.Point(477, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 29);
             this.label3.TabIndex = 3;
@@ -102,7 +106,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Zar", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(481, 90);
+            this.label2.Location = new System.Drawing.Point(481, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 29);
             this.label2.TabIndex = 3;
@@ -112,16 +116,17 @@
             // 
             this.FullName_TxtBox.AccessibleDescription = "*";
             this.FullName_TxtBox.AccessibleName = "نام و نام خانوادگی";
-            this.FullName_TxtBox.Location = new System.Drawing.Point(187, 48);
+            this.FullName_TxtBox.Location = new System.Drawing.Point(187, 66);
+            this.FullName_TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FullName_TxtBox.Name = "FullName_TxtBox";
             this.FullName_TxtBox.Size = new System.Drawing.Size(220, 39);
-            this.FullName_TxtBox.TabIndex = 4;
+            this.FullName_TxtBox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Zar", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(408, 54);
+            this.label1.Location = new System.Drawing.Point(408, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 29);
             this.label1.TabIndex = 3;
@@ -130,18 +135,20 @@
             // SelectPicture_Btn
             // 
             this.SelectPicture_Btn.Font = new System.Drawing.Font("Zar", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.SelectPicture_Btn.Location = new System.Drawing.Point(6, 145);
+            this.SelectPicture_Btn.Location = new System.Drawing.Point(6, 199);
+            this.SelectPicture_Btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SelectPicture_Btn.Name = "SelectPicture_Btn";
-            this.SelectPicture_Btn.Size = new System.Drawing.Size(102, 36);
-            this.SelectPicture_Btn.TabIndex = 2;
+            this.SelectPicture_Btn.Size = new System.Drawing.Size(102, 50);
+            this.SelectPicture_Btn.TabIndex = 3;
             this.SelectPicture_Btn.Text = "انتخاب تصویر";
             this.SelectPicture_Btn.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 26);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 120);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 165);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -154,25 +161,29 @@
             this.groupBox1.Controls.Add(this.PhoneNum_TxtBox);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Zar", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 215);
+            this.groupBox1.Location = new System.Drawing.Point(32, 296);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(558, 197);
+            this.groupBox1.Size = new System.Drawing.Size(558, 271);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "راه های ارتباطی";
             // 
             // Address_TxtBox
             // 
-            this.Address_TxtBox.Location = new System.Drawing.Point(20, 132);
+            this.Address_TxtBox.Location = new System.Drawing.Point(20, 182);
+            this.Address_TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Address_TxtBox.Multiline = true;
             this.Address_TxtBox.Name = "Address_TxtBox";
-            this.Address_TxtBox.Size = new System.Drawing.Size(387, 59);
-            this.Address_TxtBox.TabIndex = 4;
+            this.Address_TxtBox.Size = new System.Drawing.Size(387, 80);
+            this.Address_TxtBox.TabIndex = 5;
             // 
             // Mobile_TxtBox
             // 
-            this.Mobile_TxtBox.Location = new System.Drawing.Point(187, 90);
+            this.Mobile_TxtBox.Location = new System.Drawing.Point(187, 124);
+            this.Mobile_TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Mobile_TxtBox.Name = "Mobile_TxtBox";
             this.Mobile_TxtBox.Size = new System.Drawing.Size(220, 39);
             this.Mobile_TxtBox.TabIndex = 4;
@@ -181,7 +192,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Zar", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(494, 132);
+            this.label4.Location = new System.Drawing.Point(494, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 27);
             this.label4.TabIndex = 3;
@@ -191,7 +202,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Zar", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(486, 90);
+            this.label5.Location = new System.Drawing.Point(486, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 27);
             this.label5.TabIndex = 3;
@@ -199,16 +210,17 @@
             // 
             // PhoneNum_TxtBox
             // 
-            this.PhoneNum_TxtBox.Location = new System.Drawing.Point(187, 48);
+            this.PhoneNum_TxtBox.Location = new System.Drawing.Point(187, 66);
+            this.PhoneNum_TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PhoneNum_TxtBox.Name = "PhoneNum_TxtBox";
             this.PhoneNum_TxtBox.Size = new System.Drawing.Size(220, 39);
-            this.PhoneNum_TxtBox.TabIndex = 4;
+            this.PhoneNum_TxtBox.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Zar", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.Location = new System.Drawing.Point(497, 48);
+            this.label6.Location = new System.Drawing.Point(497, 66);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 27);
             this.label6.TabIndex = 3;
@@ -217,22 +229,25 @@
             // Ok_Btn
             // 
             this.Ok_Btn.Font = new System.Drawing.Font("Zar", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Ok_Btn.Location = new System.Drawing.Point(12, 416);
+            this.Ok_Btn.Location = new System.Drawing.Point(32, 575);
+            this.Ok_Btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Ok_Btn.Name = "Ok_Btn";
-            this.Ok_Btn.Size = new System.Drawing.Size(99, 32);
-            this.Ok_Btn.TabIndex = 3;
+            this.Ok_Btn.Size = new System.Drawing.Size(99, 44);
+            this.Ok_Btn.TabIndex = 2;
             this.Ok_Btn.Text = "ثبت";
             this.Ok_Btn.UseVisualStyleBackColor = true;
             this.Ok_Btn.Click += new System.EventHandler(this.AddPerson_Click);
             // 
             // AddOrUpdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 457);
+            this.ClientSize = new System.Drawing.Size(625, 627);
             this.Controls.Add(this.Ok_Btn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Information);
+            this.Font = new System.Drawing.Font("Zar", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddOrUpdate";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

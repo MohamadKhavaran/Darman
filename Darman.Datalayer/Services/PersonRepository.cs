@@ -49,6 +49,7 @@ namespace Darman.Datalayer.Services
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = _connection;
                 sqlCommand.CommandText = Query;
+                sqlCommand.Parameters.AddWithValue("Id", Id);
                 _connection.Open();
                 sqlCommand.ExecuteNonQuery();
                 return true;
@@ -70,11 +71,23 @@ namespace Darman.Datalayer.Services
             DataTable dataTable = new DataTable();
             try
             {
-                string Quary = "Select Name as 'نام و نام خانوادگی '  , SSID as 'کد ملی', FatherName as 'نام  پدر ' From People";
+                // No Management On DataSources : Just Copy From SqlServer To DataGridView
+                #region Version 1.0 
+                //string Quary = "Select Name as 'نام و نام خانوادگی '  , SSID as 'کد ملی', FatherName as 'نام  پدر ' From People";
+                //SqlDataAdapter dataAdapter = new SqlDataAdapter(Quary, _connection);
+                //_connection.Open();
+                //dataAdapter.Fill(dataTable);
+                //return dataTable;
+                #endregion
+                //Select All Data From SqlServer To DataGridView + Management & Create Manually Columns
+                #region Version 2.0
+                string Quary = "Select * From People";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(Quary, _connection);
                 _connection.Open();
                 dataAdapter.Fill(dataTable);
                 return dataTable;
+                #endregion
+
             }
             catch
             {
@@ -99,6 +112,30 @@ namespace Darman.Datalayer.Services
             catch
             {
                 return false;
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
+
+        public DataTable SearchByParam(string Name)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+
+                string Quary = "Select  * From People Where Name Like @Name ";
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.CommandText = Quary;
+                sqlCommand.Connection = _connection;    
+                _connection.Open();
+
+                return dataTable;
+            }
+            catch
+            {
+                return dataTable;
             }
             finally
             {

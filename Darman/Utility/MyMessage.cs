@@ -17,5 +17,9 @@ namespace Darman.Utility
         {
             MessageBox.Show(Message, "عملیات ناموفق", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        public static DialogResult QuestionMessage(string Message)
+        {
+            return MessageBox.Show(Message, "سوال", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
     }
 }

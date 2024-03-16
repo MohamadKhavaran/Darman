@@ -31,6 +31,8 @@ namespace Darman.Presentation.People
                     {
                         MyMessage.IsSuccess("عملیات ثبت موفق آمیز بود ");
                         ClearTXT();
+                        DialogResult = DialogResult.OK;
+                        this.Close();   
                     }
                 }
             }

@@ -13,5 +13,8 @@ namespace Darman.Datalayer.Repository
         bool update(int Id, string Name, string SSID, string FatherName);
         bool Delete(int Id);
         DataTable SearchAll();
+        DataTable SearchByParam(string Name);
+
+
     }
 }
