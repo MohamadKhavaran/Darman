@@ -14,7 +14,6 @@ namespace Darman.Datalayer.Repository
         bool Delete(int Id);
         DataTable SearchAll();
         DataTable SearchByParam(string Name);
-
-
+        DataTable GetById(int Id);
     }
 }

@@ -253,6 +253,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "افزودن شخص";
+            this.Load += new System.EventHandler(this.AddOrUpdate_Load);
             this.Information.ResumeLayout(false);
             this.Information.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

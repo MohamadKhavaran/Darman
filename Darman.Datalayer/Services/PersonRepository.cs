@@ -22,14 +22,29 @@ namespace Darman.Datalayer.Services
         {
             try
             {
-                string Query = "insert into People values (@Name ,@SSID,@FatherName)";
+                //versoin 1
+                #region Stored Procedure
+                string Query = "InsertPerson";
                 SqlCommand sqlCommand = new SqlCommand(Query, _connection);
-                sqlCommand.Parameters.AddWithValue("Name", Name);
-                sqlCommand.Parameters.AddWithValue("SSID", SSID);
-                sqlCommand.Parameters.AddWithValue("FatherName", FatherName);
+                sqlCommand.Parameters.AddWithValue("@Name", Name);
+                sqlCommand.Parameters.AddWithValue("@SSID", SSID);
+                sqlCommand.Parameters.AddWithValue("@FatherName", FatherName);
                 _connection.Open();
+                sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.ExecuteNonQuery();
                 return true;
+                #endregion
+                //version 2
+                #region Normal Connection
+                //string Query = "insert into People values (@Name ,@SSID,@FatherName)";
+                //SqlCommand sqlCommand = new SqlCommand(Query, _connection);
+                //sqlCommand.Parameters.AddWithValue("Name", Name);
+                //sqlCommand.Parameters.AddWithValue("SSID", SSID);
+                //sqlCommand.Parameters.AddWithValue("FatherName", FatherName);
+                //_connection.Open();
+                //sqlCommand.ExecuteNonQuery();
+                //return true;
+                #endregion
             }
             catch
             {
@@ -103,9 +118,14 @@ namespace Darman.Datalayer.Services
         {
             try
             {
-                string Quary = "Update People Set Name=@Name,FatherName=@FatherName,SSID=@SSID Where Id=" + Id;
+                string Quary = "UpdatePerson";
                 SqlCommand sqlCommand = new SqlCommand(Quary, _connection);
+                sqlCommand.Parameters.AddWithValue("@Id", Id);
+                sqlCommand.Parameters.AddWithValue("@Name", Name);
+                sqlCommand.Parameters.AddWithValue("@SSID", SSID); 
+                sqlCommand.Parameters.AddWithValue("@FatherName",FatherName);
                 _connection.Open();
+                sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.ExecuteNonQuery();
                 return true;
             }
@@ -125,12 +145,12 @@ namespace Darman.Datalayer.Services
             try
             {
 
-                string Quary = "Select  * From People Where Name Like @Name ";
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.CommandText = Quary;
-                sqlCommand.Connection = _connection;    
+                string Query = "Select  * From People Where Name Like @Name ";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(Query,_connection);
                 _connection.Open();
-
+                // dataAdapter.SelectCommand.CommandType = CommandType.Text;
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@Name", $"%{Name}%");
+                dataAdapter.Fill(dataTable);
                 return dataTable;
             }
             catch
@@ -141,6 +161,29 @@ namespace Darman.Datalayer.Services
             {
                 _connection.Close();
             }
+        }
+
+        public DataTable GetById(int Id)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                string Query = $"select * From People where Id = {Id}";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(Query, _connection);
+                _connection.Open();
+                sqlDataAdapter.Fill(dataTable);
+                return dataTable;
+            }
+            catch
+            {
+                return dataTable;
+            }
+            finally
+            {
+                _connection.Close();
+            }
+
+
         }
     }
 }

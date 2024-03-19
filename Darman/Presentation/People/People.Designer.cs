@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewPeople = new System.Windows.Forms.DataGridView();
-            this.Edit_btn = new System.Windows.Forms.Button();
-            this.Delete_btn = new System.Windows.Forms.Button();
+            this.Search_TxtBox = new System.Windows.Forms.TextBox();
             this.Search_btn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.AddPerson_btn = new System.Windows.Forms.Button();
+            this.Delete_btn = new System.Windows.Forms.Button();
+            this.Edit_btn = new System.Windows.Forms.Button();
+            this.dataGridViewPeople = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SSID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +45,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Search_TxtBox);
             this.groupBox1.Controls.Add(this.Search_btn);
             this.groupBox1.Controls.Add(this.AddPerson_btn);
             this.groupBox1.Controls.Add(this.Delete_btn);
@@ -59,6 +59,53 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "عملیات پیشرفته";
+            // 
+            // Search_TxtBox
+            // 
+            this.Search_TxtBox.Location = new System.Drawing.Point(110, 72);
+            this.Search_TxtBox.Name = "Search_TxtBox";
+            this.Search_TxtBox.Size = new System.Drawing.Size(293, 41);
+            this.Search_TxtBox.TabIndex = 3;
+            this.Search_TxtBox.TextChanged += new System.EventHandler(this.Search_TxtBox_TextChanged);
+            // 
+            // Search_btn
+            // 
+            this.Search_btn.Location = new System.Drawing.Point(6, 70);
+            this.Search_btn.Name = "Search_btn";
+            this.Search_btn.Size = new System.Drawing.Size(98, 44);
+            this.Search_btn.TabIndex = 2;
+            this.Search_btn.Text = "جست و جو";
+            this.Search_btn.UseVisualStyleBackColor = true;
+            // 
+            // AddPerson_btn
+            // 
+            this.AddPerson_btn.Location = new System.Drawing.Point(409, 70);
+            this.AddPerson_btn.Name = "AddPerson_btn";
+            this.AddPerson_btn.Size = new System.Drawing.Size(98, 44);
+            this.AddPerson_btn.TabIndex = 1;
+            this.AddPerson_btn.Text = "افزودن";
+            this.AddPerson_btn.UseVisualStyleBackColor = true;
+            this.AddPerson_btn.Click += new System.EventHandler(this.AddPerson_Click);
+            // 
+            // Delete_btn
+            // 
+            this.Delete_btn.Location = new System.Drawing.Point(513, 70);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(98, 44);
+            this.Delete_btn.TabIndex = 1;
+            this.Delete_btn.Text = "حذف";
+            this.Delete_btn.UseVisualStyleBackColor = true;
+            this.Delete_btn.Click += new System.EventHandler(this.DeletePerson_Click);
+            // 
+            // Edit_btn
+            // 
+            this.Edit_btn.Location = new System.Drawing.Point(617, 70);
+            this.Edit_btn.Name = "Edit_btn";
+            this.Edit_btn.Size = new System.Drawing.Size(98, 44);
+            this.Edit_btn.TabIndex = 0;
+            this.Edit_btn.Text = "ویرایش";
+            this.Edit_btn.UseVisualStyleBackColor = true;
+            this.Edit_btn.Click += new System.EventHandler(this.Update_Click);
             // 
             // dataGridViewPeople
             // 
@@ -76,51 +123,6 @@
             this.dataGridViewPeople.RowTemplate.Height = 24;
             this.dataGridViewPeople.Size = new System.Drawing.Size(721, 509);
             this.dataGridViewPeople.TabIndex = 1;
-            // 
-            // Edit_btn
-            // 
-            this.Edit_btn.Location = new System.Drawing.Point(617, 70);
-            this.Edit_btn.Name = "Edit_btn";
-            this.Edit_btn.Size = new System.Drawing.Size(98, 44);
-            this.Edit_btn.TabIndex = 0;
-            this.Edit_btn.Text = "ویرایش";
-            this.Edit_btn.UseVisualStyleBackColor = true;
-            // 
-            // Delete_btn
-            // 
-            this.Delete_btn.Location = new System.Drawing.Point(513, 70);
-            this.Delete_btn.Name = "Delete_btn";
-            this.Delete_btn.Size = new System.Drawing.Size(98, 44);
-            this.Delete_btn.TabIndex = 1;
-            this.Delete_btn.Text = "حذف";
-            this.Delete_btn.UseVisualStyleBackColor = true;
-            this.Delete_btn.Click += new System.EventHandler(this.DeletePerson_Click);
-            // 
-            // Search_btn
-            // 
-            this.Search_btn.Location = new System.Drawing.Point(6, 70);
-            this.Search_btn.Name = "Search_btn";
-            this.Search_btn.Size = new System.Drawing.Size(98, 44);
-            this.Search_btn.TabIndex = 2;
-            this.Search_btn.Text = "جست و جو";
-            this.Search_btn.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(110, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 41);
-            this.textBox1.TabIndex = 3;
-            // 
-            // AddPerson_btn
-            // 
-            this.AddPerson_btn.Location = new System.Drawing.Point(409, 70);
-            this.AddPerson_btn.Name = "AddPerson_btn";
-            this.AddPerson_btn.Size = new System.Drawing.Size(98, 44);
-            this.AddPerson_btn.TabIndex = 1;
-            this.AddPerson_btn.Text = "افزودن";
-            this.AddPerson_btn.UseVisualStyleBackColor = true;
-            this.AddPerson_btn.Click += new System.EventHandler(this.AddPerson_Click);
             // 
             // Id
             // 
@@ -184,7 +186,7 @@
         private System.Windows.Forms.Button Search_btn;
         private System.Windows.Forms.Button Delete_btn;
         private System.Windows.Forms.Button Edit_btn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Search_TxtBox;
         private System.Windows.Forms.Button AddPerson_btn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
