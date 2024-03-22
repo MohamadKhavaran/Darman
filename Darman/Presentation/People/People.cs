@@ -85,11 +85,12 @@ namespace Darman.Presentation.People
 
         private void Search_TxtBox_TextChanged(object sender, EventArgs e)
         {
-            
-                DataTable dataTable = _personRepository.SearchByParam(Search_TxtBox.Text);
-                dataGridViewPeople.AutoGenerateColumns = false;
-                dataGridViewPeople.DataSource = dataTable;
-            
+
+            DataTable dataTable = _personRepository.SearchByParam(Search_TxtBox.Text.Trim());
+            dataGridViewPeople.AutoGenerateColumns = false;
+            dataGridViewPeople.DataSource = dataTable;
+            if (dataGridViewPeople.Rows.Count > 0)
+                dataGridViewPeople.Rows[0].Selected = false;
         }
     }
 }

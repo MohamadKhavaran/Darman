@@ -32,7 +32,7 @@ namespace Darman.Datalayer.Services
                 _connection.Open();
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.ExecuteNonQuery();
-                return true;
+                return true ;
                 #endregion
                 //version 2
                 #region Normal Connection
@@ -60,12 +60,12 @@ namespace Darman.Datalayer.Services
         {
             try
             {
-                string Query = "Delete People Where Id = @Id";
                 SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = _connection;
+                string Query = "Delete People Where Id = @Id";
                 sqlCommand.CommandText = Query;
-                sqlCommand.Parameters.AddWithValue("Id", Id);
+                sqlCommand.Connection = _connection;
                 _connection.Open();
+                sqlCommand.Parameters.AddWithValue("Id", Id);
                 sqlCommand.ExecuteNonQuery();
                 return true;
             }
@@ -122,8 +122,8 @@ namespace Darman.Datalayer.Services
                 SqlCommand sqlCommand = new SqlCommand(Quary, _connection);
                 sqlCommand.Parameters.AddWithValue("@Id", Id);
                 sqlCommand.Parameters.AddWithValue("@Name", Name);
-                sqlCommand.Parameters.AddWithValue("@SSID", SSID); 
-                sqlCommand.Parameters.AddWithValue("@FatherName",FatherName);
+                sqlCommand.Parameters.AddWithValue("@SSID", SSID);
+                sqlCommand.Parameters.AddWithValue("@FatherName", FatherName);
                 _connection.Open();
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.ExecuteNonQuery();
@@ -146,7 +146,7 @@ namespace Darman.Datalayer.Services
             {
 
                 string Query = "Select  * From People Where Name Like @Name ";
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(Query,_connection);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(Query, _connection);
                 _connection.Open();
                 // dataAdapter.SelectCommand.CommandType = CommandType.Text;
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@Name", $"%{Name}%");
